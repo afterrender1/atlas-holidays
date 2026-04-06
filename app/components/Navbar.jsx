@@ -75,12 +75,12 @@ export default function Navbar() {
       ref={navbarRef}
       className={`sticky top-0 z-50 bg-white  border-slate-200 ${inter.className}`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-3.5 flex items-center justify-between">
+      <div className="max-w-380 mx-auto px-6 lg:px-10 py-3.5 flex items-center justify-between">
 
         {/* ── Left: Logo + Badge ── */}
         <div ref={logoRef} className="flex items-center gap-2.5 shrink-0">
           <a href="/" className="flex items-center gap-2.5 group">
-      <Image  src={"/logo.png"} height={100} width={150} />
+      <Image  src={"/logo.png"} height={100} width={130} />
           </a>
         </div>
 
