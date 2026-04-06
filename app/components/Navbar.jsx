@@ -96,6 +96,7 @@ export default function Navbar() {
                 text-[16.5px] font-medium text-slate-600
                 hover:text-blue-600
                 transition-colors duration-200
+                text-center tracking-wider
                 group
               "
             >
@@ -127,6 +128,7 @@ export default function Navbar() {
               px-5 py-2.75 rounded-lg
               transition-colors duration-200
               shadow-sm
+
             "
           >
             Contact Us
