@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={` h-full antialiased`}
+      className={` h-full antialiased`} suppressContentEditableWarning ={true}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
