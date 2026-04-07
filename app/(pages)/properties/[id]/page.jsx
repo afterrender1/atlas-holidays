@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import data from "@/app/data.json";
 import { useParams } from "next/navigation";
-import { urbanist , inter } from "@/app/fonts";
+import { urbanist, inter } from "@/app/fonts";
 
 const PropertyPage = () => {
   const { id } = useParams();
@@ -63,12 +63,12 @@ const PropertyPage = () => {
           {/* --- QUICK STATS BAR (OVERLAPPING) --- */}
           <div className={`absolute -bottom-10 left-0 right-0 px-4 md:px-12 z-30 ${urbanist.className}`}>
             <div className="max-w-7xl mx-auto bg-white rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100 px-6 py-2 flex flex-wrap items-center justify-between gap-8">
-              
+
               <div className="flex items-center gap-6">
                 <div className="text-xl  font-bold text-slate-700 border-r border-slate-200 pr-8">
                   Quick Stats
                 </div>
-                
+
                 {/* Bed Stat */}
                 <div className="flex flex-col">
                   <div className="flex items-center gap-2">
@@ -96,8 +96,8 @@ const PropertyPage = () => {
 
               {/* Location Stat */}
               <div className="flex items-center gap-4 ml-auto bg-slate-50 px-6 py-3 rounded-xl border border-slate-100">
-                  <p className="text-sm font-black text-slate-900">{property.city}, {property.state}</p>
-                  <button className="text-blue-600 cursor-pointer text-xs underline font-bold hover:text-blue-800">View on Map</button>
+                <p className="text-sm font-black text-slate-900">{property.city}, {property.state}</p>
+                <button className="text-blue-600 cursor-pointer text-xs underline font-bold hover:text-blue-800">View on Map</button>
               </div>
 
             </div>
@@ -106,34 +106,41 @@ const PropertyPage = () => {
       </div>
 
       {/* --- PAGE CONTENT --- */}
-      <div className="max-w-7xl mx-auto px-8 mt-24 grid grid-cols-1 lg:grid-cols-12 gap-16">
-        
+      <div className="max-w-330 mx-auto px-8 mt-24 grid grid-cols-1 lg:grid-cols-12 gap-16">
+
         {/* LEFT COLUMN */}
-        <div className="lg:col-span-8">
+        <div className={`lg:col-span-8 ${urbanist.className}`}>
           {/* Header & Price */}
-          <div className="mb-12 border-b border-slate-200 pb-12">
-            <h1 className="text-5xl font font-bold text-slate-900 mb-4 leading-[1.1]">
-              {property.title}
-            </h1>
-            <p className="text-xl text-slate-500 font-light mb-6 tracking-wide italic">{property.address}</p>
-            <div className="inline-block bg-emerald-50 px-6 py-3 rounded-xl border border-emerald-100">
-                <span className="text-xl font-bold text-emerald-600">
+          <div className="flex justify-between mb-6 border-b border-slate-200 pb-2">
+            <div>
+              <h1 className="text-5xl font font-bold text-slate-700 mb-2 leading-[1.1]">
+                {property.title}
+              </h1>
+              <p className="text-xl text-slate-500 font-light mb-2 tracking-wide ">{property.address}</p>
+            </div>
+            <div className="px-2 py-1.5 rounded-xl  border-emerald-100">
+              <span className="text-xl font-bold text-emerald-600">
                 {property.formattedPrice}
-                </span>
+              </span>
             </div>
           </div>
 
+          <div className="mb-10 bg-white">
+            <h2 className="text-xl  font-bold text-slate-700 mb-1 tracking-tight">Description</h2>
+            <p className="text-slate-600 leading-relaxed text-md font-light">
+              {property.description}
+            </p>
+          </div>
           {/* Luxury Gallery Grid */}
           <div className="mb-16">
             <h2 className="text-xl font font-bold text-slate-900 mb-6 uppercase tracking-widest">Property Gallery</h2>
             <div className="flex gap-4 overflow-x-auto pb-6 scrollbar-hide">
               {property.gallery?.map((img, i) => (
-                <div 
-                  key={i} 
+                <div
+                  key={i}
                   onClick={() => setMainImage(img)}
-                  className={`relative min-w-45 h-32 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 border-4 ${
-                    mainImage === img ? "border-blue-600 scale-105 shadow-xl" : "border-transparent opacity-70 hover:opacity-100"
-                  }`}
+                  className={`relative min-w-45 h-32 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 border-4 ${mainImage === img ? "border-blue-600 scale-105 shadow-xl" : "border-transparent opacity-70 hover:opacity-100"
+                    }`}
                 >
                   <img src={img} alt="Gallery" className="w-full h-full object-cover" />
                 </div>
@@ -141,13 +148,6 @@ const PropertyPage = () => {
             </div>
           </div>
 
-          {/* Description */}
-          <div className="mb-16 bg-white p-10 rounded-xl shadow-sm border border-slate-100">
-            <h2 className="text-3xl  font-bold text-slate-900 mb-6 tracking-tight">Description</h2>
-            <p className="text-slate-600 leading-relaxed text-md font-light">
-              {property.description}
-            </p>
-          </div>
 
           {/* Amenities */}
           <div>
@@ -179,7 +179,7 @@ const PropertyPage = () => {
                   className="w-full h-full rounded-xl object-cover shadow-xl rotate-3 group-hover:rotate-0 transition-transform"
                 />
                 <div className="absolute -bottom-2 -right-2 bg-blue-600 text-white p-2 rounded-xl shadow-lg">
-                    🛡️
+                  🛡️
                 </div>
               </div>
               <h3 className="font font-bold text-3xl text-slate-900">{property.agent.name}</h3>
