@@ -3,6 +3,10 @@ import React, { useState } from "react";
 import data from "@/app/data.json";
 import { useParams } from "next/navigation";
 import { urbanist, inter } from "@/app/fonts";
+import { PiPhoneCall } from "react-icons/pi";
+import { CiCalendarDate } from "react-icons/ci";
+
+
 
 const PropertyPage = () => {
   const { id } = useParams();
@@ -186,13 +190,13 @@ const PropertyPage = () => {
             </div>
 
             <div className="space-y-3 pt-4 border-t border-slate-100">
-              <button className="w-full bg-slate-900 hover:bg-black text-white font-bold py-4 rounded-xl transition-all  active:scale-95">
-                📞 Instant Call
+              <button className="cursor-pointer w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition-all  active:scale-95">
+                <span><PiPhoneCall /></span> Instant Call
               </button>
-              <button className="w-full border-2 border-slate-200 hover:bg-slate-50 text-slate-900 font-bold py-4 rounded-xl transition-all active:scale-95">
-                📅 Book Viewing
+              <button className="cursor-pointer w-full flex items-center justify-center gap-2 border-2 border-slate-200 hover:bg-slate-50 text-slate-900 font-bold py-4 rounded-xl transition-all active:scale-95">
+                <span><CiCalendarDate /></span> Book Viewing
               </button>
-              <button className="w-full text-slate-400 hover:text-blue-600 font-bold text-sm transition-all pt-4">
+              <button className="cursor-pointer w-full text-slate-400 hover:text-blue-600 font-bold text-sm transition-all pt-4">
                 Ask a Question
               </button>
             </div>
