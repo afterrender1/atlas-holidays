@@ -20,7 +20,7 @@
     "agent": {
       "name": "John Carter",
       "phone": "+1 234 567 890",
-      "image": "/images/agents/a1.jpg"
+      "image": "/images/agents/a1.png"
     }
   },
   {
@@ -44,7 +44,7 @@
     "agent": {
       "name": "Sarah Lee",
       "phone": "+1 987 654 321",
-      "image": "/images/agents/a2.jpg"
+      "image": "/images/agents/a5.png"
     }
   },
   {
@@ -68,7 +68,8 @@
     "agent": {
       "name": "Michael Brown",
       "phone": "+1 555 333 222",
-      "image": "/images/agents/a3.jpg"
+          "image": "/images/agents/a2.png"
+
     }
   },
   {
@@ -92,7 +93,8 @@
     "agent": {
       "name": "Olivia Smith",
       "phone": "+1 444 888 999",
-      "image": "/images/agents/a4.jpg"
+          "image": "/images/agents/a6.png"
+
     }
   },
   {
@@ -116,7 +118,8 @@
     "agent": {
       "name": "David Walker",
       "phone": "+1 222 111 000",
-      "image": "/images/agents/a5.jpg"
+            "image": "/images/agents/a4.png"
+
     }
   },
   {
@@ -140,7 +143,7 @@
     "agent": {
       "name": "Emma Wilson",
       "phone": "+1 666 777 888",
-      "image": "/images/agents/a6.jpg"
+      "image": "/images/agents/a7.png"
     }
   }
 ]

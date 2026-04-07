@@ -169,29 +169,27 @@ const PropertyPage = () => {
         </div>
 
         {/* RIGHT COLUMN (AGENT) */}
-        <div className="lg:col-span-4">
-          <div className="sticky top-12 bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-xl shadow-slate-200/50">
-            <div className="text-center mb-10">
-              <div className="relative w-32 h-32 mx-auto mb-6">
+        <div className={`lg:col-span-4 ${urbanist.className}`}>
+          <div className="sticky top-12 bg-white border border-slate-100 rounded-xl p-4 shadow-xl shadow-slate-200/50">
+            <div className="text-center mb-1">
+              <div className="relative w-32 h-32 mx-auto mb-1">
                 <img
                   src={property.agent.image}
                   alt={property.agent.name}
-                  className="w-full h-full rounded-xl object-cover shadow-xl rotate-3 group-hover:rotate-0 transition-transform"
+                  className="w-full h-full rounded-xl object-cover group-hover:rotate-0 transition-transform"
                 />
-                <div className="absolute -bottom-2 -right-2 bg-blue-600 text-white p-2 rounded-xl shadow-lg">
-                  🛡️
-                </div>
+               
               </div>
               <h3 className="font font-bold text-3xl text-slate-900">{property.agent.name}</h3>
               <p className="text-blue-600 font-bold tracking-widest text-[10px] uppercase mt-2">Principal Consultant</p>
-              <p className="text-slate-900 font-black text-xl mt-4 tracking-tighter">{property.agent.phone}</p>
+              <p className="text-slate-900 font-black text-xl mt-1 tracking-tighter">{property.agent.phone}</p>
             </div>
 
-            <div className="space-y-4 pt-8 border-t border-slate-100">
-              <button className="w-full bg-slate-900 hover:bg-black text-white font-bold py-5 rounded-xl transition-all shadow-xl active:scale-95">
+            <div className="space-y-3 pt-4 border-t border-slate-100">
+              <button className="w-full bg-slate-900 hover:bg-black text-white font-bold py-4 rounded-xl transition-all  active:scale-95">
                 📞 Instant Call
               </button>
-              <button className="w-full border-2 border-slate-200 hover:bg-slate-50 text-slate-900 font-bold py-5 rounded-xl transition-all active:scale-95">
+              <button className="w-full border-2 border-slate-200 hover:bg-slate-50 text-slate-900 font-bold py-4 rounded-xl transition-all active:scale-95">
                 📅 Book Viewing
               </button>
               <button className="w-full text-slate-400 hover:text-blue-600 font-bold text-sm transition-all pt-4">
