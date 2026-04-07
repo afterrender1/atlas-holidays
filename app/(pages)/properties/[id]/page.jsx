@@ -97,7 +97,7 @@ const PropertyPage = () => {
               {/* Location Stat */}
               <div className="flex items-center gap-4 ml-auto bg-slate-50 px-6 py-3 rounded-xl border border-slate-100">
                   <p className="text-sm font-black text-slate-900">{property.city}, {property.state}</p>
-                  <button className="text-blue-600 text-xs underline font-bold hover:text-blue-800">View on Map</button>
+                  <button className="text-blue-600 cursor-pointer text-xs underline font-bold hover:text-blue-800">View on Map</button>
               </div>
 
             </div>
