@@ -25,7 +25,7 @@ const PropertyPage = () => {
   }
 
   return (
-    <div className={`bg-[#FAF9F6] min-h-screen mt-20 pb-20 ${inter.className}`}>
+    <div className={`bg-[#FAF9F6] min-h-screen mt-14 pb-20 ${inter.className}`}>
       {/* --- HERO SECTION --- */}
       <div className="max-w-330 mx-auto px-4 pt-8">
         <div className="relative group overflow-visible">
@@ -41,14 +41,14 @@ const PropertyPage = () => {
           </div>
 
           {/* Top Center Badge */}
-          <div className="absolute top-8 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-md border border-white/30 px-6 py-2 rounded-full shadow-xl z-10">
-            <span className="text-[10px] tracking-[0.3em] font-bold text-white uppercase">
+          <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-sm border border-white/30 px-6 py-2 rounded-full shadow-xl z-10">
+            <span className="text-[10px] tracking-widest font-bold text-white/90 uppercase">
               Properties / Featured Estate
             </span>
           </div>
 
           {/* Floating Contact Card (Glassmorphism) */}
-          <div className={`absolute bottom-8 right-8 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl shadow-xl p-4 w-70 text-white z-10 hidden md:block ${urbanist.className}`}>
+          <div className={`absolute bottom-8 right-8 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl shadow-xl p-4 w-70 text-white z-10 hidden md:block ${urbanist.className}`}>
             <h3 className="text-2xl text-center font-semibold mb-4 leading-tight">Contact card</h3>
             <div className="space-y-3">
               <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold cursor-pointer py-2.5 rounded-xl text-sm transition-all shadow-lg active:scale-95">
