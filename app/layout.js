@@ -1,3 +1,4 @@
+import Navbar from "./components/Navbar";
 import "./globals.css";
 
 
@@ -32,7 +33,11 @@ export default function RootLayout({ children }) {
       lang="en"
       className={` h-full antialiased`} suppressContentEditableWarning ={true}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar/>
+        {children}
+        
+        </body>
     </html>
   );
 }

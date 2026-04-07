@@ -4,8 +4,10 @@ import React from "react";
 import Image from "next/image";
 import data from "../data.json";
 import { urbanist, inter } from "@/app/fonts.js"
+import { useRouter } from "next/navigation";
 
 const Featured = () => {
+    const router = useRouter();
     return (
       <section className={`w-full bg-slate-50 py-12 sm:py-16 ${inter.className}`}>
   <div className="max-w-350 mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,7 +68,9 @@ const Featured = () => {
                 <div className="text-lg sm:text-xl font-bold">
                   {item.formattedPrice}
                 </div>
-                <button className="bg-white/20 backdrop-blur-xl hover:bg-white/30 border border-white/40 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-colors cursor-pointer">
+                <button onClick={()=> {
+router.push(`/properties/${item.id}`)
+                }} className="bg-white/20 backdrop-blur-xl hover:bg-white/30 border border-white/40 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-colors cursor-pointer">
                   See More
                 </button>
               </div>
