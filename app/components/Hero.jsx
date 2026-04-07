@@ -104,7 +104,7 @@ export default function Hero() {
       />
 
       {/* ── Main content wrapper ── */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-14 py-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12 lg:gap-6 xl:gap-10">
+      <div className="relative z-10 w-full max-w-350 mx-auto px-5 sm:px-8 lg:px-14 py-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12 lg:gap-6 xl:gap-10">
 
         {/* ══════════════ LEFT ══════════════ */}
         <div className="w-full lg:max-w-[55%] xl:max-w-[52%] flex flex-col">
